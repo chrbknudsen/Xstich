@@ -1,0 +1,2 @@
+Mon ikke jeg skal starte med at definere et json format til alfabeter.
+Og derefter en glyph-editor.
