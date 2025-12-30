@@ -1,2 +1,83 @@
 Mon ikke jeg skal starte med at definere et json format til alfabeter.
 Og derefter en glyph-editor.
+
+
+her er et bud:
+
+{
+  "schema_version": "1.0",
+  "type": "crossstitch_alphabet",
+  "alphabet_id": "simple_block_7x9",
+  "name": "Simple Block 7x9",
+  "defaults": {
+    "grid": { "width": 7, "height": 9 },
+    "units_per_cell": 2,
+    "baseline_y": 7,
+    "advance_x": 8,
+    "palette": {
+      "main": "#000000"
+    },
+    "stitch": {
+      "cross_style": "full",
+      "backstitch_thickness": 1
+    }
+  },
+  "glyphs": {
+    "A": {
+      "grid": { "width": 7, "height": 9 },
+      "advance_x": 8,
+      "cross": [
+        { "x": 1, "y": 8, "color": "main" },
+        { "x": 2, "y": 7, "color": "main" },
+        { "x": 3, "y": 6, "color": "main" },
+        { "x": 4, "y": 7, "color": "main" },
+        { "x": 5, "y": 8, "color": "main" },
+
+        { "x": 1, "y": 5, "color": "main" },
+        { "x": 2, "y": 5, "color": "main" },
+        { "x": 3, "y": 5, "color": "main" },
+        { "x": 4, "y": 5, "color": "main" },
+        { "x": 5, "y": 5, "color": "main" }
+      ],
+      "backstitch": [
+        {
+          "color": "main",
+          "thickness": 1,
+          "segments": [
+            { "from": [2, 2], "to": [12, 2] },
+            { "from": [2, 2], "to": [2, 16] },
+            { "from": [12, 2], "to": [12, 16] }
+          ]
+        }
+      ],
+      "anchors": {
+        "cap_height_y": 1,
+        "x_height_y": 4
+      }
+    },
+
+    "Å": {
+      "base": "A",
+      "backstitch": [
+        {
+          "color": "main",
+          "segments": [
+            { "from": [6, 0], "to": [8, 0] },
+            { "from": [6, 0], "to": [6, 2] },
+            { "from": [8, 0], "to": [8, 2] },
+            { "from": [6, 2], "to": [8, 2] }
+          ]
+        }
+      ]
+    }
+  },
+  "kerning": [
+    { "left": "A", "right": "V", "dx": -1 },
+    { "left": "T", "right": "o", "dx": -1 }
+  ],
+  "meta": {
+    "author": "you",
+    "license": "CC0-1.0",
+    "created": "2025-12-30"
+  }
+}
